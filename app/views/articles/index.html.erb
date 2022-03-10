@@ -1,0 +1,19 @@
+<h1>listing of Blogging</h1>
+<table>
+    <thead>
+        <tr>
+        
+        <th>Title</th>
+        <th>Description</th>
+        <th>action</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <% @articles.each do |article| %>
+            <td><%= article.title %></td>
+            <td><%= article.description %></td>
+            <td> Place holder</td>
+            <%end%>
+    </tbody>
+</table>

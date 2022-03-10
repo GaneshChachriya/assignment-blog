@@ -1,0 +1,23 @@
+<h1>new Blog</h1>
+<% if @article.errors.any? %>
+<h2> the following error prevent to being saved you blog</h2>
+<ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <li> <%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_with scope: :article url:artilces_path, local: true do |f| %>
+    <p>
+       <%= f.label :title %> </br>
+       <%= f.text_field :title %>
+    </p>
+    <P>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </p>
+    <%end%>
+    <p>
+        <%= f.submit %>
+    </p>
